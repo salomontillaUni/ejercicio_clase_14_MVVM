@@ -1,11 +1,11 @@
-package com.salomon.appmvvm.view
+package com.salomon.appmvvm.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import com.salomon.appmvvm.databinding.ActivityMainBinding
-import com.salomon.appmvvm.viewmodel.QuoteViewModel
+import com.salomon.appmvvm.ui.viewmodel.QuoteViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
