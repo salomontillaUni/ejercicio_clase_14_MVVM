@@ -22,8 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         //Observa si hay cambios en el model
         quoteViewModel.quoteModel.observe(this, Observer{
-            binding.tvQuote.text = it.quote
-            binding.tvAutor.text = it.author
+            binding.tvQuote.text = it?.quote
+            binding.tvAutor.text = it?.author
 
         })
         binding.tvContainer.setOnClickListener{
