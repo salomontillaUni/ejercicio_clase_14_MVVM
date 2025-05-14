@@ -4,7 +4,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.salomon.appmvvm.data.model.QuoteModel
-import com.salomon.appmvvm.data.model.QuoteProvider
 import com.salomon.appmvvm.domain.GetQuotesUseCase
 import com.salomon.appmvvm.domain.GetRandomQuoteUseCase
 import kotlinx.coroutines.launch
