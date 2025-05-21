@@ -1,9 +1,11 @@
 package com.salomon.appmvvm.ui.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import com.salomon.appmvvm.data.model.UserProvider
 import com.salomon.appmvvm.databinding.ActivityMainBinding
 import com.salomon.appmvvm.ui.viewmodel.QuoteViewModel
 
@@ -31,10 +33,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         val name = intent.getStringExtra("name")
-        val lastname = intent.getStringExtra("name")
-        val jwt = intent.getStringExtra("name")
+        val lastname = intent.getStringExtra("lastName")
+        val jwt = intent.getStringExtra("jwt")
 
-        binding.tvUser.text = "$name = $lastname - $jwt"
+        binding.tvUser.text = "$name - $lastname - $jwt"
+
+        binding.tvUser.setOnClickListener{
+            UserProvider.user = null
+            val intent = Intent (this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
     }
