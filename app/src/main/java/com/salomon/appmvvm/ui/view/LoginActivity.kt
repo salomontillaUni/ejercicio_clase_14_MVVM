@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "Bienvenido ${it?.name}", Toast.LENGTH_SHORT).show()
         }
     }
-    
+
     private fun validateData(): Boolean {
         var isValid = true
         with(binding){
