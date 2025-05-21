@@ -29,5 +29,13 @@ class MainActivity : AppCompatActivity() {
         binding.tvContainer.setOnClickListener{
             quoteViewModel.randomQuote()
         }
+
+        val name = intent.getStringExtra("name")
+        val lastname = intent.getStringExtra("name")
+        val jwt = intent.getStringExtra("name")
+
+        binding.tvUser.text = "$name = $lastname - $jwt"
+
+
     }
 }
